@@ -49,11 +49,6 @@
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
   {% include 'oldIE-js' %}
-  <script src="{{ 'jquery-3.5.0.min.js' | asset_url }}" type="text/javascript" async></script>
-  <script src="{{ 'api.jquery.js' | shopify_asset_url }}" type="text/javascript" async></script>
-  <script src="{{ 'modernizr-2.8.3.min.js' | asset_url }}" type="text/javascript" async></script>
-  <script src="{{ 'option_selection.js' | shopify_asset_url }}" type="text/javascript" async></script>
-  <script src="{{ 'lazysizes.min.js' | asset_url }}" type="text/javascript" async></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -105,6 +100,11 @@
 Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
 <body class="{% if settings.enable_rtl_mode %}rtl{% endif %} preload push_filter_left js_overhidden relative" {% if settings.bg_color_body != blank %}style="background: {{settings.bg_color_body }};"{% endif %}>
+  {% comment %}theme-check-disable ParserBlockingScriptTag{% endcomment %}
+  <script src="{{ 'jquery-3.5.0.min.js' | asset_url }}"></script>
+  <script src="{{ 'api.jquery.js' | shopify_asset_url }}"></script>
+  <script src="{{ 'option_selection.js' | shopify_asset_url }}"></script>
+  {% comment %}theme-check-enable ParserBlockingScriptTag{% endcomment %}
 
   <div class="wrap">
     <div class="contentbody">
@@ -138,6 +138,8 @@ Add the page template as a class for easy page or template specific styling.
   {% endif %}
 
 
+  <script src="{{ 'modernizr-2.8.3.min.js' | asset_url }}" type="text/javascript" defer></script>
+  <script src="{{ 'lazysizes.min.js' | asset_url }}" type="text/javascript" defer></script>
   <script src="{{ 'fastclick.js' | asset_url }}" type="text/javascript" defer></script>
   {% include 'currencies' %}
   <script src="{{ 'timber.js' | asset_url }}" type="text/javascript" defer></script>
