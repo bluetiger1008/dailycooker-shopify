@@ -1,0 +1,230 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1663398411147b03e1": {
+      "type": "section-slideshow-v2",
+      "blocks": {
+        "16633984115152f8fa-0": {
+          "type": "slideshow",
+          "settings": {
+            "block_title_top": "Kitchen Knife",
+            "block_title_top2": "Collection Design",
+            "color_block_title_top": "#000000",
+            "block_subtitle": "from $69",
+            "color_subtitle": "#000000",
+            "block_buton": "Shop now",
+            "color_button": "#ffffff",
+            "bg_color_button": "#000000",
+            "color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#f8c461",
+            "block_url": "shopify://collections/all"
+          }
+        },
+        "16633984115152f8fa-1": {
+          "type": "slideshow",
+          "settings": {
+            "block_title_top": "Pressure Cooker",
+            "block_title_top2": "Mini Sale",
+            "color_block_title_top": "#000000",
+            "block_subtitle": "from $80",
+            "color_subtitle": "#000000",
+            "block_buton": "Shop now",
+            "color_button": "#ffffff",
+            "bg_color_button": "#000000",
+            "color_button_hover": "#ffffff",
+            "bg_color_button_hover": "#f8c461",
+            "block_url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "16633984115152f8fa-0",
+        "16633984115152f8fa-1"
+      ],
+      "settings": {
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "1663404589000fb1dc": {
+      "type": "section-countdown-v1",
+      "blocks": {
+        "1663404589a1e23831-0": {
+          "type": "countdown",
+          "settings": {
+            "select_pd": "cxinyi-2-in-1-glass-olive-oil-sprayer-dispenser-bottle-16oz-470ml",
+            "enable_label_pd": true,
+            "timer": "2023-12-12-12-12-12",
+            "btn_name": "Buy Now"
+          }
+        },
+        "1663404589a1e23831-1": {
+          "type": "countdown",
+          "settings": {
+            "select_pd": "raymylo-40-oz-insulated-water-bottle-triple-wall-vacuum-stainless-steel-flask-with-paracord-handle",
+            "enable_label_pd": true,
+            "timer": "2023-12-12-12-12-12",
+            "btn_name": "Buy Now"
+          }
+        }
+      },
+      "block_order": [
+        "1663404589a1e23831-0",
+        "1663404589a1e23831-1"
+      ],
+      "settings": {
+        "title_info": "Deal Off The Day",
+        "color_title_info": "",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "1663408658f3ff68f9": {
+      "type": "section-banner-v1",
+      "blocks": {
+        "1663408658cdc1e47a-0": {
+          "type": "item",
+          "settings": {
+            "title_item": "EXPRESS SHIPPING",
+            "color_title": "#909090"
+          }
+        },
+        "1663408658cdc1e47a-1": {
+          "type": "item",
+          "settings": {
+            "title_item": "QUICK INSTALLATION",
+            "color_title": "#909090"
+          }
+        },
+        "1663408658cdc1e47a-2": {
+          "type": "item",
+          "settings": {
+            "title_item": "30 DAY RETURN POLICY",
+            "color_title": "#909090"
+          }
+        }
+      },
+      "block_order": [
+        "1663408658cdc1e47a-0",
+        "1663408658cdc1e47a-1",
+        "1663408658cdc1e47a-2"
+      ],
+      "settings": {
+        "bg_info": "#eef1f9",
+        "title_top": "A LITTLE ABOUT US",
+        "color_title_top": "#909090",
+        "title_banner": "WHY CHOOSE US",
+        "color_title": "#000000",
+        "subtitle_banner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "color_subtitle": "#909090",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "1663900095538df929": {
+      "type": "section-product-v3",
+      "settings": {
+        "title_heading": "Best Seller",
+        "color_title": "#222222",
+        "sub_title": "Best Seller Product This Week!",
+        "color_sub_title": "#666666",
+        "select_collection": "oil-dispensers-sprayers",
+        "products_limit": 12,
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "16611614193c77f5af": {
+      "type": "newsletter_about_v3",
+      "settings": {
+        "select_width": "container",
+        "enable_bd_bottom": true,
+        "title_newletter": "SIGN UP <br>FOR NEWSLETTER",
+        "color_title": "",
+        "content_newletter": "Subscribe to the weekly newsletter for all the latest updates",
+        "color_content": "",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "16635745597b517019": {
+      "type": "section-banner-v2",
+      "settings": {
+        "location_info": "left",
+        "title_banner": "Napkins <strong>Kitchen</strong> Collection",
+        "color_title_banner": "",
+        "sub_title": "Sale offer 30% off this week",
+        "color_subtitle_banner": "",
+        "button_banner": "SHOP NOW",
+        "url_banner": "shopify://collections/all",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    },
+    "166343051997d96714": {
+      "type": "section-testimonial-v1",
+      "blocks": {
+        "1663430519f544e1d2-0": {
+          "type": "testimonial",
+          "settings": {
+            "block_name": "DESTINEE",
+            "block_des": "Marketing Personal",
+            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+          }
+        },
+        "1663430519f544e1d2-1": {
+          "type": "testimonial",
+          "settings": {
+            "block_name": "DESTINEE",
+            "block_des": "Marketing Personal",
+            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+          }
+        },
+        "1663430519f544e1d2-2": {
+          "type": "testimonial",
+          "settings": {
+            "block_name": "DESTINEE",
+            "block_des": "Marketing Personal",
+            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+          }
+        },
+        "1663430519f544e1d2-3": {
+          "type": "testimonial",
+          "settings": {
+            "block_name": "DESTINEE",
+            "block_des": "Marketing Personal",
+            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+          }
+        }
+      },
+      "block_order": [
+        "1663430519f544e1d2-0",
+        "1663430519f544e1d2-1",
+        "1663430519f544e1d2-2",
+        "1663430519f544e1d2-3"
+      ],
+      "settings": {
+        "section_title": "Testimonials",
+        "margin_top": "",
+        "margin_bottom": ""
+      }
+    }
+  },
+  "order": [
+    "1663398411147b03e1",
+    "1663404589000fb1dc",
+    "1663408658f3ff68f9",
+    "1663900095538df929",
+    "16611614193c77f5af",
+    "16635745597b517019",
+    "166343051997d96714"
+  ]
+}

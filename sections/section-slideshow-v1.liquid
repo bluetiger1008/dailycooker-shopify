@@ -1,0 +1,864 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% for block in section.blocks %}
+{% if block.type == "slideshow" %}
+{% if block.settings.fonts_subtitle != blank %}
+<link href="https://fonts.googleapis.com/css2?family={{ block.settings.fonts_subtitle }}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+{% endif %}
+{% if block.settings.fonts_title != blank %}
+<link href="https://fonts.googleapis.com/css2?family={{ block.settings.fonts_title }}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+{% endif %}
+{% if block.settings.fonts_description != blank %}
+<link href="https://fonts.googleapis.com/css2?family={{ block.settings.fonts_description }}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+{% endif %}
+{% if block.settings.fonts_button != blank %}
+<link href="https://fonts.googleapis.com/css2?family={{ block.settings.fonts_button }}:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+{% endif %}
+{% endif %}
+{% endfor %}
+<div data-section-id="{{ section.id }}" data-section-type="section-slideshow-v1" style="{% if section.settings.margin_top != blank %}margin-top: {{section.settings.margin_top}}px;{% endif %} {% if section.settings.margin_bottom != blank %}margin-bottom: {{section.settings.margin_bottom}}px;{% endif %} {% if section.settings.sections_layout == "dark" %}background: {{ section.settings.sections_bg_color }};{% endif %}">
+  <div class="section-slideshow-v1">
+    <div class="slick-slide-h1 js-slideshow-v1">       
+      {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+      {% if block.type == "slideshow" %}
+      <div class="item-slide">
+        <div class="info-slide">
+          <div class="picture-slideshow">
+            {% if block.settings.block_bg_image != blank %}
+            <img loading="lazy" width="" height="" src="{{ block.settings.block_bg_image | image_url }}" class="img-fluid w-100" alt="slideshow">
+            {% else %}
+            <img loading="lazy" width="" height="" src="//via.placeholder.com/1920x900" class="img-fluid w-100" alt="slideshow">
+            {% endif %}
+          </div>
+
+          <div class="box-content">
+            {% if block.settings.block_title or block.settings.block_sub_title or block.settings.block_desc or block.settings.block_buton != blank %}
+            <div class="box-info box-info-{{ block.id }} {% if block.settings.select_textalign_content == 'left' %} text-left {% elsif block.settings.select_textalign_content == 'center' %} text-center {% else %} text-right {% endif %}">                          
+
+              {% if block.settings.block_subtitle != blank %}
+              <div class="box-subtitle box-subtitle-{{ block.id }} animated">
+                <p class="subtitle-slide" style="background:{{ block.settings.bg_block_subtitle }}; color:{{ block.settings.color_block_subtitle }};">
+                  {{ block.settings.block_subtitle }}
+                </p>
+              </div>
+              {% endif %}
+
+              {% if block.settings.block_title != blank %}
+              <div class="box-title box-title-{{ block.id }} animated">
+                <h2 class="title-slide" style="color:{{ block.settings.color_block_title }};">
+                  {{ block.settings.block_title }}
+                </h2>
+              </div>
+              {% endif %}
+
+              {% if block.settings.block_desc != blank %}
+              <div class="box-desc box-desc-{{ block.id }} animated">
+                <p style="color:{{ block.settings.color_block_desc }};">
+                  {{ block.settings.block_desc }}
+                </p>
+              </div>
+              {% endif %}
+
+              {% if block.settings.block_buton != blank %}
+              <div class="box-button">
+                <a class="button-main1 button-shop-{{ block.id }} animated" href="{{ block.settings.block_url }}">
+                  {{ block.settings.block_buton }}
+                </a>
+              </div>
+              {% endif %}
+
+            </div>
+            {% endif %}
+          </div>          
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<style>
+  
+  {% for block in section.blocks %}
+  {% if block.type == 'slideshow' %}
+  .section-slideshow-v1 .item-slide .info-slide .box-content .box-button .button-shop-{{ block.id }} {
+    color : {{ block.settings.color_button }};
+    background: {{ block.settings.bg_color_button }};
+  }
+  .section-slideshow-v1 .item-slide .info-slide .box-content .box-button .button-shop-{{ block.id }}:hover{
+    color : {{ block.settings.color_button_hover }};
+    background: {{ block.settings.bg_color_button_hover }};
+  }
+  
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-subtitle-{{block.id}}{    
+    -webkit-animation-name: {{ block.settings.effect_subtitle }};
+    animation-name:  {{ block.settings.effect_subtitle }}; ;
+  }
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-title-{{block.id}}{    
+    -webkit-animation-name: {{ block.settings.effect_title }};
+    animation-name:  {{ block.settings.effect_title }}; ;
+  }
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-desc-{{block.id}}{     
+    -webkit-animation-name: {{ block.settings.effect_des }};
+    animation-name:  {{ block.settings.effect_des }}; ;
+  }
+  
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .button-shop-{{block.id}}{      
+    -webkit-animation-name: {{ block.settings.effect_button }};
+    animation-name:  {{ block.settings.effect_button }}; ;
+  }
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-subtitle-{{block.id}}{    
+    {% if block.settings.fonts_subtitle != blank %}
+      font-family: '{{ block.settings.fonts_subtitle }}';
+        {% endif %}
+  }
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-title-{{block.id}}{    
+    {% if block.settings.fonts_title != blank %}
+      font-family: '{{ block.settings.fonts_title }}';
+        {% endif %}
+  }
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .box-desc-{{block.id}}{     
+    {% if block.settings.fonts_description != blank %}
+      font-family: '{{ block.settings.fonts_description }}';
+        {% endif %}
+  }
+  
+  .section-slideshow-v1 .slick-active .info-slide .box-info-{{ block.id }} .button-shop-{{block.id}}{      
+    {% if block.settings.fonts_button != blank %}
+      font-family: '{{ block.settings.fonts_button }}';
+        {% endif %}
+  }
+
+  {% endif %}
+  {% endfor %}
+</style>
+{% schema %}
+{
+  "name": "SLIDESHOW V1",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "color_dots",
+      "label": "Color Dots Number",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Section Space"
+    },
+    {
+      "type": "text",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    },
+    {
+      "type": "text",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "info": "Defined in pixels. Do not add the 'px' unit."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slideshow",
+      "name": "slideshow",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block_bg_image",
+          "label": "Image slideshow",
+          "info": "1920 x 1100px recommended"
+        },
+        {
+          "type": "select",
+          "id": "select_textalign_content",
+          "label": "Text Align Content",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "text",
+          "id": "block_subtitle",
+          "label": "Subtitle slideshow",
+          "default": "Kitchen Store"
+        },
+        {
+          "type": "color",
+          "id": "bg_block_subtitle",
+          "label": "Background Subtitle slideshow",
+          "default": "#076cec"
+        },
+        {
+          "type": "color",
+          "id": "color_block_subtitle",
+          "label": "Color Subtitle slideshow",
+          "default": "#fff"
+        },
+        {
+          "type": "text",
+          "id": "fonts_subtitle",
+          "label": "Fonts Family"
+        },
+        {
+          "type": "select",
+          "id": "effect_subtitle",
+          "label": "Choose The Effect Subtitle",
+          "info": "[Reference effect in here](https://animate.style/)",
+          "options": [
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            },
+            {
+              "value": "flash",
+              "label": "Flash"
+            },
+            {
+              "value": "pulse",
+              "label": "Pulse"
+            },
+            {
+              "value": "rubberBand",
+              "label": "Rubberband"
+            },
+            {
+              "value": "shake",
+              "label": "Shake"
+            },
+            {
+              "value": "swing",
+              "label": "Swing"
+            },
+            {
+              "value": "tada",
+              "label": "tada"
+            },
+            {
+              "value": "wobble",
+              "label": "Wobble"
+            },
+            {
+              "value": "jello",
+              "label": "Jello"
+            },
+            {
+              "value": "heartBeat",
+              "label": "HeartBeat"
+            },
+            {
+              "value": "backInDown",
+              "label": "Back In Down"
+            },
+            {
+              "value": "backInLeft",
+              "label": "Back In Left"
+            },
+            {
+              "value": "backInRight",
+              "label": "Back In Right"
+            },
+            {
+              "value": "backInUp",
+              "label": "Back In Up"
+            },
+            {
+              "value": "bounceIn",
+              "label": "BounceIn"
+            },
+            {
+              "value": "bounceInDown",
+              "label": "Bounce In Down"
+            },
+            {
+              "value": "bounceInLeft",
+              "label": "Bounce In Left"
+            },
+            {
+              "value": "bounceInRight",
+              "label": "Bounce In Right"
+            },
+            {
+              "value": "fadeIn",
+              "label": "Fade In"
+            },
+            {
+              "value": "fadeInDown",
+              "label": "Fade In Down"
+            },
+            {
+              "value": "fadeInLeft",
+              "label": "Fade In Left"
+            },
+            {
+              "value": "fadeInRight",
+              "label": "Fade In Right"
+            },
+            {
+              "value": "fadeInUp",
+              "label": "Fade In Up"
+            },
+            {
+              "value": "flipInX",
+              "label": "Flip In X"
+            },
+            {
+              "value": "flipInY",
+              "label": "Flip In Y"
+            },
+            {
+              "value": "lightSpeedIn",
+              "label": "Light Speed In"
+            },
+            {
+              "value": "slideInUp",
+              "label": "Slide In Up"
+            },
+            {
+              "value": "slideInRight",
+              "label": "Slide In Right"
+            },
+            {
+              "value": "slideInDown",
+              "label": "Slide In Down"
+            },
+            {
+              "value": "slideInLeft",
+              "label": "Slide In Left"
+            },
+            {
+              "value": "zoomIn",
+              "label": "Zoom In"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Title slideshow",
+          "default": "Cooking Kitchen<br>Collection",
+          "info": "Down the line use html tag: <br>. Example: Cooking Kitchen<br>Collection"
+        },
+        {
+          "type": "color",
+          "id": "color_block_title",
+          "label": "Color Title slideshow",
+          "default": "#000"
+        },
+        {
+          "type": "text",
+          "id": "fonts_title",
+          "label": "Fonts Family"
+        },
+        {
+          "type": "select",
+          "id": "effect_title",
+          "label": "Choose The Effect Title",
+          "info": "[Reference effect in here](https://animate.style/)",
+          "options": [
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            },
+            {
+              "value": "flash",
+              "label": "Flash"
+            },
+            {
+              "value": "pulse",
+              "label": "Pulse"
+            },
+            {
+              "value": "rubberBand",
+              "label": "Rubberband"
+            },
+            {
+              "value": "shake",
+              "label": "Shake"
+            },
+            {
+              "value": "swing",
+              "label": "Swing"
+            },
+            {
+              "value": "tada",
+              "label": "tada"
+            },
+            {
+              "value": "wobble",
+              "label": "Wobble"
+            },
+            {
+              "value": "jello",
+              "label": "Jello"
+            },
+            {
+              "value": "heartBeat",
+              "label": "HeartBeat"
+            },
+            {
+              "value": "backInDown",
+              "label": "Back In Down"
+            },
+            {
+              "value": "backInLeft",
+              "label": "Back In Left"
+            },
+            {
+              "value": "backInRight",
+              "label": "Back In Right"
+            },
+            {
+              "value": "backInUp",
+              "label": "Back In Up"
+            },
+            {
+              "value": "bounceIn",
+              "label": "BounceIn"
+            },
+            {
+              "value": "bounceInDown",
+              "label": "Bounce In Down"
+            },
+            {
+              "value": "bounceInLeft",
+              "label": "Bounce In Left"
+            },
+            {
+              "value": "bounceInRight",
+              "label": "Bounce In Right"
+            },
+            {
+              "value": "fadeIn",
+              "label": "Fade In"
+            },
+            {
+              "value": "fadeInDown",
+              "label": "Fade In Down"
+            },
+            {
+              "value": "fadeInLeft",
+              "label": "Fade In Left"
+            },
+            {
+              "value": "fadeInRight",
+              "label": "Fade In Right"
+            },
+            {
+              "value": "fadeInUp",
+              "label": "Fade In Up"
+            },
+            {
+              "value": "flipInX",
+              "label": "Flip In X"
+            },
+            {
+              "value": "flipInY",
+              "label": "Flip In Y"
+            },
+            {
+              "value": "lightSpeedIn",
+              "label": "Light Speed In"
+            },
+            {
+              "value": "slideInUp",
+              "label": "Slide In Up"
+            },
+            {
+              "value": "slideInRight",
+              "label": "Slide In Right"
+            },
+            {
+              "value": "slideInDown",
+              "label": "Slide In Down"
+            },
+            {
+              "value": "slideInLeft",
+              "label": "Slide In Left"
+            },
+            {
+              "value": "zoomIn",
+              "label": "Zoom In"
+            }
+          ]
+        },
+        {
+          "type": "textarea",
+          "id": "block_desc",
+          "label": "Description slideshow",
+          "default": "Pressure Cooker is the best thing that ever<br>happened to your cooking. Plus, it's easy to use."
+        },
+        {
+          "type": "color",
+          "id": "color_block_desc",
+          "label": "Color Description slideshow",
+          "default": "#000"
+        },
+        {
+          "type": "text",
+          "id": "fonts_description",
+          "label": "Fonts Family"
+        },
+        {
+          "type": "select",
+          "id": "effect_des",
+          "label": "Choose The Effect Description",
+          "info": "[Reference effect in here](https://animate.style/)",
+          "options": [
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            },
+            {
+              "value": "flash",
+              "label": "Flash"
+            },
+            {
+              "value": "pulse",
+              "label": "Pulse"
+            },
+            {
+              "value": "rubberBand",
+              "label": "Rubberband"
+            },
+            {
+              "value": "shake",
+              "label": "Shake"
+            },
+            {
+              "value": "swing",
+              "label": "Swing"
+            },
+            {
+              "value": "tada",
+              "label": "tada"
+            },
+            {
+              "value": "wobble",
+              "label": "Wobble"
+            },
+            {
+              "value": "jello",
+              "label": "Jello"
+            },
+            {
+              "value": "heartBeat",
+              "label": "HeartBeat"
+            },
+            {
+              "value": "backInDown",
+              "label": "Back In Down"
+            },
+            {
+              "value": "backInLeft",
+              "label": "Back In Left"
+            },
+            {
+              "value": "backInRight",
+              "label": "Back In Right"
+            },
+            {
+              "value": "backInUp",
+              "label": "Back In Up"
+            },
+            {
+              "value": "bounceIn",
+              "label": "BounceIn"
+            },
+            {
+              "value": "bounceInDown",
+              "label": "Bounce In Down"
+            },
+            {
+              "value": "bounceInLeft",
+              "label": "Bounce In Left"
+            },
+            {
+              "value": "bounceInRight",
+              "label": "Bounce In Right"
+            },
+            {
+              "value": "fadeIn",
+              "label": "Fade In"
+            },
+            {
+              "value": "fadeInDown",
+              "label": "Fade In Down"
+            },
+            {
+              "value": "fadeInLeft",
+              "label": "Fade In Left"
+            },
+            {
+              "value": "fadeInRight",
+              "label": "Fade In Right"
+            },
+            {
+              "value": "fadeInUp",
+              "label": "Fade In Up"
+            },
+            {
+              "value": "flipInX",
+              "label": "Flip In X"
+            },
+            {
+              "value": "flipInY",
+              "label": "Flip In Y"
+            },
+            {
+              "value": "lightSpeedIn",
+              "label": "Light Speed In"
+            },
+            {
+              "value": "slideInUp",
+              "label": "Slide In Up"
+            },
+            {
+              "value": "slideInRight",
+              "label": "Slide In Right"
+            },
+            {
+              "value": "slideInDown",
+              "label": "Slide In Down"
+            },
+            {
+              "value": "slideInLeft",
+              "label": "Slide In Left"
+            },
+            {
+              "value": "zoomIn",
+              "label": "Zoom In"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "block_buton",
+          "label": "Button slideshow",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "block_url",
+          "label": "URL button slideshow",
+          "default": "/collections/all"
+        },
+        {
+          "type": "text",
+          "id": "fonts_button",
+          "label": "Fonts Family"
+        },
+        {
+          "type": "select",
+          "id": "effect_button",
+          "label": "Choose The Effect Button",
+          "info": "[Reference effect in here](https://animate.style/)",
+          "options": [
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            },
+            {
+              "value": "flash",
+              "label": "Flash"
+            },
+            {
+              "value": "pulse",
+              "label": "Pulse"
+            },
+            {
+              "value": "rubberBand",
+              "label": "Rubberband"
+            },
+            {
+              "value": "shake",
+              "label": "Shake"
+            },
+            {
+              "value": "swing",
+              "label": "Swing"
+            },
+            {
+              "value": "tada",
+              "label": "tada"
+            },
+            {
+              "value": "wobble",
+              "label": "Wobble"
+            },
+            {
+              "value": "jello",
+              "label": "Jello"
+            },
+            {
+              "value": "heartBeat",
+              "label": "HeartBeat"
+            },
+            {
+              "value": "backInDown",
+              "label": "Back In Down"
+            },
+            {
+              "value": "backInLeft",
+              "label": "Back In Left"
+            },
+            {
+              "value": "backInRight",
+              "label": "Back In Right"
+            },
+            {
+              "value": "backInUp",
+              "label": "Back In Up"
+            },
+            {
+              "value": "bounceIn",
+              "label": "BounceIn"
+            },
+            {
+              "value": "bounceInDown",
+              "label": "Bounce In Down"
+            },
+            {
+              "value": "bounceInLeft",
+              "label": "Bounce In Left"
+            },
+            {
+              "value": "bounceInRight",
+              "label": "Bounce In Right"
+            },
+            {
+              "value": "fadeIn",
+              "label": "Fade In"
+            },
+            {
+              "value": "fadeInDown",
+              "label": "Fade In Down"
+            },
+            {
+              "value": "fadeInLeft",
+              "label": "Fade In Left"
+            },
+            {
+              "value": "fadeInRight",
+              "label": "Fade In Right"
+            },
+            {
+              "value": "fadeInUp",
+              "label": "Fade In Up"
+            },
+            {
+              "value": "flipInX",
+              "label": "Flip In X"
+            },
+            {
+              "value": "flipInY",
+              "label": "Flip In Y"
+            },
+            {
+              "value": "lightSpeedIn",
+              "label": "Light Speed In"
+            },
+            {
+              "value": "slideInUp",
+              "label": "Slide In Up"
+            },
+            {
+              "value": "slideInRight",
+              "label": "Slide In Right"
+            },
+            {
+              "value": "slideInDown",
+              "label": "Slide In Down"
+            },
+            {
+              "value": "slideInLeft",
+              "label": "Slide In Left"
+            },
+            {
+              "value": "zoomIn",
+              "label": "Zoom In"
+            }
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Background & color button"
+        },
+        {
+          "type": "color",
+          "id": "color_button",
+          "label": "Color button",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "bg_color_button",
+          "label": "Background button",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "color_button_hover",
+          "label": "Color button hover",
+          "default": "#fff"
+        },
+        {
+          "type": "color",
+          "id": "bg_color_button_hover",
+          "label": "Background button hover",
+          "default": "#f8c461"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SLIDESHOW V1",
+      "category": "HOME",
+      "blocks": [
+        {
+          "type": "slideshow",
+          "settings": {
+            "block_subtitle": "Kitchen Store",
+            "block_title": "Cooking Kitchen<br>Collection",
+            "block_desc": "Pressure Cooker is the best thing that ever<br>happened to your cooking. Plus, it's easy to use."
+          }
+        },
+        {
+          "type": "slideshow",
+          "settings": {
+            "block_subtitle": "Best Product",
+            "block_title": "Kitchen Tool<br>Collection",
+            "block_desc": "Pressure Cooker is the best thing that ever<br>happened to your cooking. Plus, it's easy to use."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
