@@ -140,53 +140,39 @@
         "margin_bottom": ""
       }
     },
-    "16635745597b517019": {
-      "type": "section-banner-v2",
-      "settings": {
-        "location_info": "left",
-        "title_banner": "Napkins <strong>Kitchen</strong> Collection",
-        "color_title_banner": "",
-        "sub_title": "Sale offer 30% off this week",
-        "color_subtitle_banner": "",
-        "button_banner": "SHOP NOW",
-        "url_banner": "shopify://collections/all",
-        "margin_top": "",
-        "margin_bottom": ""
-      }
-    },
     "166343051997d96714": {
       "type": "section-testimonial-v1",
       "blocks": {
         "1663430519f544e1d2-0": {
           "type": "testimonial",
           "settings": {
-            "block_name": "DESTINEE",
-            "block_des": "Marketing Personal",
-            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+            "block_name": "Sarah Mitchell",
+            "block_des": "Working Mom",
+            "block_content": "\"DailyCooker has completely changed how I cook at home. The spray bottle helps me control oil perfectly, and cleanup is so much easier now. Huge time saver!\""
           }
         },
         "1663430519f544e1d2-1": {
           "type": "testimonial",
           "settings": {
-            "block_name": "DESTINEE",
+            "block_name": "Jason Lee",
             "block_des": "Marketing Personal",
-            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+            "block_content": "\"I don’t cook often, but these tools make it simple. The electric water boiler is fast and super convenient. Honestly didn’t expect this level of quality.\""
           }
         },
         "1663430519f544e1d2-2": {
           "type": "testimonial",
           "settings": {
-            "block_name": "DESTINEE",
+            "block_name": "Emily Carter",
             "block_des": "Marketing Personal",
-            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+            "block_content": "\"After long shifts, I need quick and easy cooking solutions. DailyCooker products make my life so much easier. Highly recommend for busy people.\""
           }
         },
         "1663430519f544e1d2-3": {
           "type": "testimonial",
           "settings": {
             "block_name": "DESTINEE",
-            "block_des": "Marketing Personal",
-            "block_content": "Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more than I paid Saved our business! We have no regrets! Thanks for the great service. Kitdo is worth much more!"
+            "block_des": "Jessica Nguyen",
+            "block_content": "\"I love how thoughtfully designed the products are. Everything feels premium but without the high price. Definitely worth it.\""
           }
         }
       },
@@ -209,7 +195,6 @@
     "1663408658f3ff68f9",
     "1663900095538df929",
     "16611614193c77f5af",
-    "16635745597b517019",
     "166343051997d96714"
   ]
 }
