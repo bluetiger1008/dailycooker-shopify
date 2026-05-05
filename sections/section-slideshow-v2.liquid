@@ -8,9 +8,7 @@
           <div class="info-sideh2">
             <div class="picture-slideshow">
               {% if block.settings.block_banerimage != blank %}
-              <img loading="lazy" width="" height="" src="{{ block.settings.block_banerimage | image_url }}" class="img-fluid img_slideh2" alt="">
-              {% else %}
-                <img loading="lazy" width="" height="" src="//via.placeholder.com/1920x900" class="img-fluid img_slideh2" alt="">
+              <img loading="lazy" width="" height="" src="{{ block.settings.block_banerimage | image_url }}" class="img-fluid img_slideh2" alt="{{ block.settings.block_banerimage.alt | escape }}">
               {% endif %}
             </div>
          
@@ -45,9 +43,9 @@
             </div>            
             <div class="picture_left col-lg-6 col-8 order-1 order-lg-2" data-tilt style>
               {% if block.settings.block_picture_left != blank %}
-              <img loading="lazy" width="" height="" src="{{ block.settings.block_picture_left | image_url }}" class="img-fluid" alt="">
+              <img loading="lazy" width="" height="" src="{{ block.settings.block_picture_left | image_url }}" class="slideshow-v2-picture-left-img" alt="">
               {% else %}
-              <img loading="lazy" width="" height="" src="//via.placeholder.com/766x780" class="img-fluid" alt="">
+              <img loading="lazy" width="" height="" src="//via.placeholder.com/766x780" class="slideshow-v2-picture-left-img" alt="">
               {% endif %}
             </div>            
           </div>
