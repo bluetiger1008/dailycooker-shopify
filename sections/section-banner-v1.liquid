@@ -1,6 +1,6 @@
 <div data-section-id="{{ section.id }}" data-section-type="section-banner-v1" style="{% if section.settings.margin_top != blank %}margin-top: {{section.settings.margin_top}}px;{% endif %} {% if section.settings.margin_bottom != blank %}margin-bottom: {{section.settings.margin_bottom}}px;{% endif %}">
   <div class="section-banner-v1">
-    <div class="row align-items-center no-gutters"  style="background: {{ section.settings.bg_info }}">
+    <div class="row align-items-stretch no-gutters"  style="background: {{ section.settings.bg_info }}">
       <div class="col-12 col-md-6">
         <div class="picture" style="background-image: url({% if section.settings.banner_img != blank %}{{ section.settings.banner_img | image_url }}{% else %}//via.placeholder.com/800x1000{% endif %})">
           <div class="images">

@@ -12,22 +12,6 @@
     "1663398411147b03e1": {
       "type": "section-slideshow-v2",
       "blocks": {
-        "16633984115152f8fa-0": {
-          "type": "slideshow",
-          "settings": {
-            "block_title_top": "Kitchen Knife",
-            "block_title_top2": "Collection Design",
-            "color_block_title_top": "#000000",
-            "block_subtitle": "from $69",
-            "color_subtitle": "#000000",
-            "block_buton": "Shop now",
-            "color_button": "#ffffff",
-            "bg_color_button": "#000000",
-            "color_button_hover": "#ffffff",
-            "bg_color_button_hover": "#f8c461",
-            "block_url": "shopify://collections/all"
-          }
-        },
         "16633984115152f8fa-1": {
           "type": "slideshow",
           "settings": {
@@ -41,12 +25,12 @@
             "bg_color_button": "#000000",
             "color_button_hover": "#ffffff",
             "bg_color_button_hover": "#f8c461",
-            "block_url": "shopify://collections/all"
+            "block_url": "shopify://collections/all",
+            "block_picture_left": "shopify://shop_images/716HuBmcRsL._AC_SX679.jpg"
           }
         }
       },
       "block_order": [
-        "16633984115152f8fa-0",
         "16633984115152f8fa-1"
       ],
       "settings": {
@@ -118,12 +102,13 @@
         "1663408658cdc1e47a-2"
       ],
       "settings": {
+        "banner_img": "shopify://shop_images/ChatGPT_Image_May_4_2026_08_56_28_PM.png",
         "bg_info": "#eef1f9",
         "title_top": "A LITTLE ABOUT US",
         "color_title_top": "#909090",
         "title_banner": "WHY CHOOSE US",
         "color_title": "#000000",
-        "subtitle_banner": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+        "subtitle_banner": "At DailyCooker, we believe great cooking starts with the right tools.We focus on function, simplicity, and reliability—bringing you kitchen products that elevate your everyday experience. Every item is chosen to help you cook with confidence, reduce effort, and enjoy the process.",
         "color_subtitle": "#909090",
         "margin_top": "",
         "margin_bottom": ""
